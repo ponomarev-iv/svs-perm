@@ -9,9 +9,9 @@
         {% for my_page in site.pages %}
           {% if my_page.title %}
             {% if page.url == my_page.url %}
-              <a class="page-link is-active" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+              <a class="page-link is-active" href="{{ my_page.url | relative_url }}">{{ my_page.header-name | escape }}</a>
             {% else %}
-              <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+              <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.header-name | escape }}</a>
             {% endif %}
           {% endif %}
         {% endfor %}
