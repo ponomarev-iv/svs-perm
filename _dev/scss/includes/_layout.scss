@@ -1,0 +1,20 @@
+body{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 10px;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.page-content{
+    flex: 1;
+}
+
+a {
+    outline: none !important;
+}
+
+img{
+    max-width: 100%;
+}

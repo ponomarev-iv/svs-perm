@@ -1,0 +1,73 @@
+$media-desktop: 1200px;
+$media-tablet: 991px;
+$media-mobile: 768px;
+$media-small: 480px;
+
+$breakpoints: (
+        "desktop" :$media-desktop,
+        "tablet" :$media-tablet,
+        "mobile" : $media-mobile,
+        "small" : $media-small,
+        "small-mobile": ($media-small, $media-mobile),
+        "small-tablet": ($media-small, $media-tablet),
+        "small-desktop": ($media-small, $media-desktop),
+        "mobile-tablet": ($media-mobile, $media-tablet),
+        "mobile-desktop": ($media-mobile, $media-desktop),
+        "tablet-desktop": ($media-tablet, $media-desktop),
+        "retina" : "1px"
+);
+
+@mixin respondTo($media) {
+    @if $media == small {
+        @media only screen and (max-width: $media-small) {
+            @content;
+        }
+    } @else if $media == mobile {
+        @media only screen and (max-width: $media-mobile) {
+            @content;
+        }
+    } @else if $media == tablet {
+        @media only screen and (max-width: $media-tablet) {
+            @content;
+        }
+    } @else if $media == desktop {
+        @media only screen and (max-width: $media-desktop) {
+            @content;
+        }
+    } @else if $media == small-mobile {
+        @media only screen and (min-width: $media-small) and (max-width: $media-mobile) {
+            @content;
+        }
+    } @else if $media == small-tablet {
+        @media only screen and (min-width: $media-small) and (max-width: $media-tablet) {
+            @content;
+        }
+    } @else if $media == small-desktop {
+        @media only screen and (min-width: $media-small) and (max-width: $media-desktop) {
+            @content;
+        }
+    } @else if $media == mobile-tablet {
+        @media only screen and (min-width: $media-mobile) and (max-width: $media-tablet) {
+            @content;
+        }
+    } @else if $media == mobile-desktop {
+        @media only screen and (min-width: $media-mobile) and (max-width: $media-desktop) {
+            @content;
+        }
+    } @else if $media == tablet-desktop {
+        @media only screen and (min-width: $media-tablet) and (max-width: $media-desktop) {
+            @content;
+        }
+    } @else if $media == retina {
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (-moz-min-device-pixel-ratio: 2),
+        only screen and (-ms-min-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and (min-resolution: 2dppx) {
+            @content;
+        }
+    }
+}

@@ -1,48 +1,34 @@
-<footer class="site-footer">
+<footer class="footer">
 
-  <div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-4 col-xs-12">
+        <a class="site-logo" href="{{ "/" | relative_url}}">
+        СВС
+        </a>
+        <p class="site-slogan">Производственная компания</p>
 
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>
-            {% if site.author %}
-              {{ site.author | escape }}
-            {% else %}
-              {{ site.title | escape }}
-            {% endif %}
-            </li>
-            {% if site.email %}
-            <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {% endif %}
-        </ul>
+        <p class="copyright">ООО &laquo;СВС Пермь&raquo; &copy;&nbsp;2017 Все права защищены.</p>
       </div>
 
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
+      <div class="col-md-4">
+        <div class="nav-footer" role="navigation">
+          {% assign pages_list = (site.pages | sort: 'order') %}
 
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
+          {% for my_page in pages_list %}
+            {% if my_page.title%}
+              <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.header-name | escape }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
       </div>
 
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description | escape }}</p>
+      <div class="col-md-4">
+
       </div>
     </div>
 
-  </div>
 
-  <script src="assets/js/main.js"></script>
+  </div>
 
 </footer>

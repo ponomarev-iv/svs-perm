@@ -1,8 +1,5 @@
-h1{
-    color: red;
-    font-size: 46px;
-}
-
-.is-active{
-    color: green;
-}
+@import "includes/layout";
+@import "includes/media-mixin";
+@import "includes/header";
+@import "includes/footer";
+@import "includes/menu";

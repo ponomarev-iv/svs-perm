@@ -1,24 +1,61 @@
-<header class="site-header" role="banner">
+<header class="header">
+  <div class="header-wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <a class="site-logo" href="{{ "/" | relative_url}}">
+            СВС
+          </a>
+          <p class="site-slogan">Производственная компания</p>
+        </div>
+        <div class="col-md-6 col-sm-4 col-xs-12">
+          <div class="adress">
+            <p>Пермь, ул.&nbsp;Гальперина, дом&nbsp;16, корпус&nbsp;17
+            </p>
+          </div>
+
+          <a href="#" class="map-link">Посмотреть на карте</a>
+
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <div class="phone">
+
+            <a href="tel:+73422506620">8 (342) 250 66 20</a><br>
+            <a href="tel:+79504719123">8 (950) 471 91 23</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 col-sm-9 col-xs-12">
+          <nav class="site-nav" role="navigation">
 
-    <a class="site-title" href="{{ "/" | relative_url}}">{{ site.title | escape }}</a>
+            {% assign pages_list = (site.pages | sort: 'order') %}
 
-    <nav class="site-nav">
-      <div class="trigger">
-        {% for my_page in site.pages %}
-          {% if my_page.title %}
-            {% if page.url == my_page.url %}
-              <a class="page-link is-active" href="{{ my_page.url | relative_url }}">{{ my_page.header-name | escape }}</a>
-            {% else %}
-              <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.header-name | escape }}</a>
-            {% endif %}
-          {% endif %}
-        {% endfor %}
+              {% for my_page in pages_list %}
+                {% if my_page.title%}
+                  {% if page.url == my_page.url %}
+                    <a class="page-link is-active" href="{{ my_page.url | relative_url }}">{{ my_page.header-name | escape }}</a>
+                  {% else %}
+                    <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.header-name | escape }}</a>
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
 
+          </nav>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-12">
+          <div class="search">
+            <input type="text" class="search__inp" placeholder="Поиск по сайту">
+          </div>
+        </div>
       </div>
-    </nav>
-
+    </div>
   </div>
 
 </header>
