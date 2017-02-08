@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Материалы
 header-name: Материалы
 excerpt: Материалы производства

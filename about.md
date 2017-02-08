@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Страница о нас
 header-name: О нас
 excerpt: Страница, о компании

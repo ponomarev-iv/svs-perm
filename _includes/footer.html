@@ -2,16 +2,16 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-3 col-sm-4 col-xs-12">
-        <a class="site-logo" href="{{ "/" | relative_url}}">
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <span class="site-logo">
         СВС
-        </a>
+        </span>
         <p class="site-slogan">Производственная компания</p>
 
         <p class="copyright">ООО &laquo;СВС Пермь&raquo; &copy;&nbsp;2017 Все права защищены.</p>
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-3 col-sm-3 col-xs-12">
         <div class="nav-footer" role="navigation">
           {% assign pages_list = (site.pages | sort: 'order') %}
 
@@ -23,12 +23,18 @@
         </div>
       </div>
 
-      <div class="col-md-4">
-
+      <div class="col-md-5 col-sm-5 col-xs-12">
+        <div class="phone">
+          <a href="tel:+73422506620">8 (342) 250 66 20</a><br>
+          <a href="tel:+79504719123">8 (950) 471 91 23</a>
+        </div>
+        <div class="adress">
+          <p>Пермь, ул.&nbsp;Гальперина, дом&nbsp;16, корпус&nbsp;17
+          </p>
+          <a href="#" class="map-link">Схема проезда</a>
+        </div>
       </div>
     </div>
-
-
   </div>
 
 </footer>

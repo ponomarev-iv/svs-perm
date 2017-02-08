@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Продукция
 header-name: Продукция
 excerpt: Продукция компании

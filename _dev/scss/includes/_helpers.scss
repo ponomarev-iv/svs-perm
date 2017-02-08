@@ -1,0 +1,10 @@
+.production{
+
+    @include respondTo(mobile){
+        text-align: center;
+    }
+
+    & .card__title{
+        min-height: 120px;
+    }
+}

@@ -1,0 +1,24 @@
+.btn{
+    display: block;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #fff;
+    background-color: $main-color;
+    transition: opacity ease 300ms;
+    text-decoration: none;
+    max-width: 300px;
+    padding: .8em 1em;
+    opacity: .65;
+
+    &:hover{
+        opacity: .85;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    &_centr{
+        margin: 0 auto;
+    }
+}
