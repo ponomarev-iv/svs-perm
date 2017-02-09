@@ -8,3 +8,11 @@
         min-height: 120px;
     }
 }
+
+.pull-right-reset{
+    float: right;
+
+    @include respondTo(mobile){
+        float: none;
+    }
+}

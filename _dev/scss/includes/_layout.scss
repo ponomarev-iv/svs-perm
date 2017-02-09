@@ -20,8 +20,14 @@ img{
     max-width: 100%;
 }
 
+p{
+    font-size: 1.6rem;
+    line-height: 1.35;
+    margin: 0 0 1.5em;
+}
+
 .section{
-    padding: 4rem 0;
+    padding: 5rem 0;
 
     &-title{
         text-align: center;
@@ -29,5 +35,31 @@ img{
         margin: 0 0 1.25em;
         text-transform: uppercase;
         color: $main-color;
+
+        @include respondTo(mobile){
+            font-size: 2.4rem;
+        }
     }
+}
+
+.proizvodstvo,
+.material,
+.about-us{
+    border-top: 1px solid $main-color;
+
+    @include respondTo(mobile){
+        text-align: center;
+        & img{
+            margin-bottom: 25px;
+        }
+
+        & .btn{
+            display: inline-block;
+            min-width: 280px;
+        }
+    }
+}
+
+.material{
+    background-color: #D1E0EB;
 }

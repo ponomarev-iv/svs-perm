@@ -31,3 +31,50 @@
         }
     }
 }
+
+//contact-block
+.contact-block{
+    background-color: #D1E0EB;
+    border-radius: 4px;
+    padding: 2rem;
+
+    &__title{
+        text-align: center;
+        font-size: 2rem;
+        margin: 0 0 1em;
+    }
+
+    &__info{
+        position: relative;
+        padding-left: 7.5rem;
+
+        &-row{
+            padding-bottom: 8px;
+            &:after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            &:last-of-type{
+                padding-bottom: 0;
+            }
+        }
+
+        & p{
+            font-size: 1.3rem;
+            line-height: 1.2;
+        }
+
+        & a{
+            font-size: 1.3rem;
+            white-space: nowrap;
+        }
+    }
+
+    &__abbr{
+        position: absolute;
+        left: 0;
+        font-size: 1.4rem;
+    }
+}
