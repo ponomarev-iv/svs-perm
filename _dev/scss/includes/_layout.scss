@@ -29,6 +29,10 @@ p{
 .section{
     padding: 5rem 0;
 
+    &_border{
+        border-top: 1px solid $main-color;
+    }
+
     &-title{
         text-align: center;
         font-size: 3.6rem;
@@ -38,6 +42,10 @@ p{
 
         @include respondTo(mobile){
             font-size: 2.4rem;
+        }
+
+        &_mrg-top{
+            margin-top: 1.25em;
         }
     }
 }

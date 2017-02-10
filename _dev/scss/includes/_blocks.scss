@@ -30,6 +30,58 @@
             font-size: 2rem;
         }
     }
+
+    &_horizont{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 2.5rem;
+
+        @include respondTo(mobile){
+            max-width: none;
+            flex-direction: column;
+        }
+
+
+        & .card__img{
+
+            @include respondTo(mobile){
+               text-align: center;
+                margin-bottom: 2rem;
+            }
+
+            & img{
+                border-radius: 50%;
+                width: 220px;
+                height: 220px;
+                max-width: none;
+            }
+        }
+
+        & .card__info{
+            padding-left: 3rem;
+
+            @include respondTo(mobile){
+                padding-left: 0;
+            }
+        }
+
+        & .card__title{
+            padding: 0 0 .7em;
+
+            @include respondTo(mobile){
+                text-align: center;
+            }
+        }
+    }
+}
+
+article.card{
+    cursor: auto;
+
+    &:hover{
+        box-shadow: none;
+    }
 }
 
 //contact-block
@@ -38,10 +90,19 @@
     border-radius: 4px;
     padding: 2rem;
 
+    @include respondTo(mobile){
+        margin-top: 30px;
+        text-align: left;
+    }
+
     &__title{
         text-align: center;
         font-size: 2rem;
         margin: 0 0 1em;
+
+        @include respondTo(mobile){
+            text-align: left;
+        }
     }
 
     &__info{

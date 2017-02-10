@@ -1,0 +1,21 @@
+.reg-table{
+    width: 100%;
+    margin-bottom: 40px;
+    font-size: 1.4rem;
+
+    & tr{
+        &:nth-child(2n){
+            background-color: #fcfcfc;
+        }
+    }
+
+    & td,
+    & th{
+        border: 1px solid #cccccc;
+        padding: 1em .8em;
+    }
+
+    & th{
+        background-color: #D1E0EB;
+    }
+}
