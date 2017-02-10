@@ -139,3 +139,22 @@ article.card{
         font-size: 1.4rem;
     }
 }
+
+.team-block{
+    @extend .contact-block;
+
+    &__abbr{
+        font-size: 1.4rem;
+    }
+
+    & p{
+        font-weight: 600;
+        font-size: 1.8rem;
+        margin: 0 0 1.25em;
+    }
+
+    &__title{
+        font-size: 2.4rem;
+        margin: 0 0 1em;
+    }
+}
