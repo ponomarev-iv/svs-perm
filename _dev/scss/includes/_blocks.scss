@@ -74,6 +74,36 @@
             }
         }
     }
+
+    &-wrap{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include respondTo(mobile){
+            display: block;
+            text-align: center;
+        }
+    }
+
+    &_foto{
+        width: 270px;
+
+        @include respondTo(desktop){
+            width: 280px;
+        }
+
+        @include respondTo(mobile){
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__info{
+        font-size: 1.4rem;
+        padding: 1em;
+    }
 }
 
 article.card{
