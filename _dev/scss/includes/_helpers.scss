@@ -24,3 +24,17 @@
 .f-22{
     font-size: 2.2rem;
 }
+
+.gap-b-60{
+    margin-bottom: 60px;
+}
+
+#name{
+    @include respondTo(tablet){
+        margin-bottom: 30px;
+    }
+
+    @include respondTo(small){
+        margin-bottom: 20px;
+    }
+}

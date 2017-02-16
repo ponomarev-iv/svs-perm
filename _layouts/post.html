@@ -1,18 +1,21 @@
----
-layout: default
----
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<!DOCTYPE html>
+<html lang="ru">
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-  </header>
+{% include head.html %}
 
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+<body>
 
-  {% if site.disqus.shortname %}
-    {% include disqus_comments.html %}
-  {% endif %}
-</article>
+{% include header.html %}
+
+<main class="page-content" aria-label="Content">
+  {{ content }}
+</main>
+<div  id="map">
+  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=obWm7xVXxbWm855SZwFfBgA08IrPLro-&amp;width=100%25&amp;height=480&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
+</div>
+
+{% include footer.html %}
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
