@@ -22,3 +22,29 @@
         margin: 0 auto;
     }
 }
+
+.list-reg{
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem;
+    text-align: left;
+
+    & li{
+        position: relative;
+        padding: 0 0 0 .8em;
+        font-size: 1.6rem;
+        line-height: 1;
+        margin-bottom: .5em;
+
+        &:before{
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 50%;
+            border-radius: 50%;
+            border: 1px solid #333;
+            width: 3px;
+            height: 3px;
+        }
+    }
+}

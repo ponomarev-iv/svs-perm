@@ -38,7 +38,7 @@
             {% assign pages_list = (site.pages | sort: 'order') %}
 
               {% for my_page in pages_list %}
-                {% if my_page.title%}
+                {% if my_page.order %}
                   {% if page.url == my_page.url %}
                     <a class="page-link is-active" href="{{ my_page.url | relative_url }}">{{ my_page.header-name | escape }}</a>
                   {% else %}

@@ -38,3 +38,25 @@
         margin-bottom: 20px;
     }
 }
+
+.content-img{
+    @include respondTo(mobile){
+        margin-bottom: 3rem;
+    }
+
+    &_mrg-top{
+        @include respondTo(mobile){
+            margin-top: 3rem;
+        }
+    }
+}
+
+hr{
+    margin: 5rem 0;
+    height: 1px;
+    background-color: $border-color;
+
+    @include respondTo(mobile){
+        margin: 2rem 0;
+    }
+}

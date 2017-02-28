@@ -24,6 +24,16 @@ p{
     font-size: 1.6rem;
     line-height: 1.35;
     margin: 0 0 1.5em;
+
+    &.no-mrg,
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+.txt-conclusion{
+    font-size: 2.2rem;
+    color: $main-color;
 }
 
 .section{
