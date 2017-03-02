@@ -188,3 +188,14 @@ article.card{
         margin: 0 0 1em;
     }
 }
+
+//хлебные крошки
+.breadcrumbs{
+    float: right;
+    padding-top: 2rem;
+    font-size: 1.6rem;
+
+    @include respondTo(tablet){
+        font-size: 1.4rem;
+    }
+}
