@@ -60,3 +60,26 @@ hr{
         margin: 2rem 0;
     }
 }
+
+//search
+.ya-site-form__input-text{
+    height: 32px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding: 4px 8px;
+    width: 100%;
+
+    @include respondTo(mobile){
+        //max-width: 300px;
+    }
+}
+
+.ya-site-form__search-input{
+    padding: 0 !important;
+}
+
+.ya-site-form__submit{
+    height: 30px;
+    border: 0;
+    border-radius: 1px;
+}

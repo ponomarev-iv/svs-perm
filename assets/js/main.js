@@ -1,0 +1,1 @@
+function sendForm(){$("#form").submit(function(){return $.ajax({type:"POST",url:"send.php",data:$(this).serialize()}).done(function(){$(this).find("input").val(""),alert("Спасибо за обращение в нашу компанию. В ближайшее время мы свяжемся с вами."),$("#form").trigger("reset")}),!1})}$(document).ready(function(){sendForm()});
