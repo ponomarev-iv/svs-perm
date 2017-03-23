@@ -57,6 +57,22 @@ p{
         &_mrg-top{
             margin-top: 1.25em;
         }
+
+        &_sm{
+            font-size: 2.8rem;
+
+            @include respondTo(mobile){
+                font-size: 2.2rem;
+            }
+        }
+
+        &_xs{
+            font-size: 2.2rem;
+
+            @include respondTo(mobile){
+                font-size: 1.8rem;
+            }
+        }
     }
 }
 

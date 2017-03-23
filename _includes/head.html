@@ -4,7 +4,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 200 | escape }}">
+  {% if page.keywords %}
+  <meta name="keywords" content="{{ page.keywords }}" />
+  {% else %}
+  <meta name="keywords" content="СВС Пермь, СВС, фторопласт, фторопласт ф4, фторопласт ф-4, изделия из фторопласта, ф-4, купить фторопласт, фторопластовые изделий" />
+  {% endif %}
   <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="libs/bootstrap.min.css">
