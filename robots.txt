@@ -1,0 +1,6 @@
+Host: https://svs-perm.ru/
+
+User-agent: *
+Disallow: /libs/
+Disallow: /assets/
+Disallow: /404-error.html
