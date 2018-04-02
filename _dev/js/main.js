@@ -17,6 +17,30 @@ function sendForm() {
     });
 }
 
+function openImagePopup(){
+    var imgPopup = $('.js-image-popup'),
+        title = $(imgPopup).siblings();
+
+    if(imgPopup.length){
+        if(title.length){
+            for(var i=0;i<title.length;i++){
+                var titleTxt = $(title[i]).text();
+                $(imgPopup[i]).attr('title', titleTxt);
+            }
+        }
+
+        imgPopup.magnificPopup({
+            type:'image',
+            fixedContentPos: true,
+            zoom: {
+                enabled: true,
+                duration: 300 // don't foget to change the duration also in CSS
+            }
+        });
+    }
+}
+
 $(document).ready(function () {
     sendForm();
+    openImagePopup();
 })
