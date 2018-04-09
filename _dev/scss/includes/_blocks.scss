@@ -110,6 +110,10 @@
 
         @at-root .card_full &{
             font-size: 2rem;
+
+            @include respondTo(small){
+                font-size: 1.5rem;
+            }
         }
     }
 }
